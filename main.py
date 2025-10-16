@@ -331,7 +331,7 @@ async def start(bot, m: Message):
         await start_message.edit_text(
             f"🌟 Welcome Dear😋 {m.from_user.first_name}! 🌟\n\n" +
             f"Great! You are a premium member!\n"
-            f"Use Command : /help to get started 🌟\n\n"
+            f"Use Command : /explore to get started 🌟\n\n"
             f"If you face any problem contact to me😎 -  [@SmartBoy_ApnaMS](https://t.me/SmartBoy_ApnaMS)\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
         )
     else:
@@ -365,7 +365,7 @@ async def id_command(client, message: Message):
     await message.reply_text(
         f" 🎉 Welcome😚 {message.from_user.first_name} to DRM Bot! 🎉\n\n"
            f"You can have access to download all Non-DRM+AES Encrypted URLs 🔐 including\n\n"
-           f"Use Command : /help to get started 🌟\n\n"
+           f"Use Command : /explore to get started 🌟\n\n"
            f"• 📚 Appx Zip+Encrypted Url\n"
            f"• 🎓 Classplus DRM+ NDRM\n"
            f"• 🧑‍🏫 PhysicsWallah DRM\n"
