@@ -412,15 +412,15 @@ async def info(bot: Client, update: Message):
 @bot.on_message(filters.command(["help"]))
 async def txt_handler(client: Client, m: Message):
     await bot.send_message(m.chat.id, text= (
-        f"╭━━━━━━━✦✧✦━━━━━━━╮\n"
-        f"💥 𝐂𝐎𝐌𝐌𝐀𝐍𝐃 𝐌𝐄𝐍𝐔 \n"
-        f"╰━━━━━━━✦✧✦━━━━━━━╯\n"
+        f"╭━━━━━━━✦𝄞✦━━━━━━━╮\n"
+        f"💥 𝗔𝗟𝗟 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 𝐌𝐄𝐍𝐔 \n"
+        f"╰━━━━━━━✦𝄞✦━━━━━━━╯\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n" 
         f"📌 𝗠𝗮𝗶𝗻 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀:\n\n"  
         f"➥ /start – Bot Status Check\n"
-        f"➥ /mk – Extract from .txt (Auto)\n"
-        f"➥ /y2t – YouTube → .txt Converter\n"  
-        f"➥ /t2t – Text → .txt Generator\n" 
+        f"➥ /vip – Extract from txt(Super Fast)😎\n"
+        f"➥ /yt2t – YouTube → .txt Converter\n"  
+        f"➥ /txt – Text → .txt file Generator\n" 
         f"➥ /stop – Cancel Running Task\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ \n" 
         f"⚙️ 𝗧𝗼𝗼𝗹𝘀 & 𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀: \n\n" 
@@ -438,7 +438,7 @@ async def txt_handler(client: Client, m: Message):
         f"• Send any link for auto-extraction\n"  
         f"• Supports batch processing\n\n"  
         f"╭────────⊰◆⊱────────╮\n"   
-        f" ➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : manish 💻\n"
+        f" ➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : ༺𝗩𝗜𝗣 𝗕𝗥𝗢𝗧𝗛𝗘𝗥𝗦༻\n"
         f"╰────────⊰◆⊱────────╯\n"
         )
     )   
@@ -453,9 +453,9 @@ async def send_logs(client: Client, m: Message):  # Correct parameter name
     except Exception as e:
         await m.reply_text(f"Error sending logs: {e}")
 
-@bot.on_message(filters.command(["mk"]) )
+@bot.on_message(filters.command(["vip"]) )
 async def txt_handler(bot: Client, m: Message):  
-    editable = await m.reply_text(f"__Hii, I am txt Downloader Bot__\n\n<i>Send Me Your txt file which enclude Name with url...\nE.g: Name: Link</i>")
+    editable = await m.reply_text(f"__HII, IM POWERFUL TXT FILE EXTRACTOR BOT__\n\n<i>SEND ME YOUR TXT FILE AND JUST WAIT AND WATCH.😎</i>")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -487,16 +487,16 @@ async def txt_handler(bot: Client, m: Message):
         os.remove(x)
         return
     
-    await editable.edit(f"Total 🔗 links found are {len(links)}\nSend From where you want to download.initial is 1")
+    await editable.edit(f"TOTAL 🔗 LINKS FOUND ARE {len(links)}\nSEND FROM WHERE YOU WANT TO DOWNLOAD🤔.INITIAL IS 1")
     if m.chat.id not in AUTH_USERS:
         print(f"User ID not in AUTH_USERS", m.chat.id)
-        await bot.send_message(m.chat.id, f"__Oopss! You are not a Premium member __\n__PLEASE /upgrade YOUR PLAN__\n__Send me your user id for authorization__\n__Your User id__ - `{m.chat.id}`\n")
+        await bot.send_message(m.chat.id, f"__Oopss! You are not a Premium member🤡 __\n__PLEASE /upgrade YOUR PLAN__\n__Send me your user id for authorization__\n__Your User id__ - `{m.chat.id}`\n")
         return
     input0: Message = await bot.listen(editable.chat.id)
     raw_text = input0.text
     await input0.delete(True)
            
-    await editable.edit("__Enter Batch Name or send /d for grabbing from text filename.__")
+    await editable.edit("__ENTER BATCH NAME OR SEND /d FOR GRABBING FROM TEXT FILENAME.__")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
@@ -505,7 +505,7 @@ async def txt_handler(bot: Client, m: Message):
     else:
         b_name = raw_text0
 
-    await editable.edit("__Enter resolution or Video Quality (`144`, `240`, `360`, `480`, `720`, `1080`)__")
+    await editable.edit("__ENTER RESOLUTION OR VIDEO QUALITY (`144`, `240`, `360`, `480`, `720`, `1080`)__")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     quality = f"{raw_text2}p"
@@ -528,7 +528,7 @@ async def txt_handler(bot: Client, m: Message):
     except Exception:
             res = "UN"
 
-    await editable.edit("__Enter the credit name for the caption. If you want both a permanent credit in the caption and the file name, separate them with a comma (,). or you want default then send /d__\n\n<blockquote><i>Example for caption only: Admin\nExample for both caption and file name: Admin,Prename</i></blockquote>")
+    await editable.edit("__ENTER THE CREDIT NAME IF YOU WANT TO USE DEFAULT SO JUST SEND /d__\n\n<blockquote><i>FOR EXAMPLE\n@SmartBoy_ApnaMS</i></blockquote>")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -539,12 +539,12 @@ async def txt_handler(bot: Client, m: Message):
     else:
         CR = raw_text3
 
-    await editable.edit("🔹Enter Your PW Token For 𝐌𝐏𝐃 𝐔𝐑𝐋\n🔹Send /anything for use default")
+    await editable.edit("🔹ENTER YOUR PW TOKEN FOR 𝐌𝐏𝐃 𝐔𝐑𝐋\n🔹SEND /anything FOR USE DEFAULT")
     input4: Message = await bot.listen(editable.chat.id)
     raw_text4 = input4.text
     await input4.delete(True)
 
-    await editable.edit(f"Send the Video Thumb URL\nSend /d for use default\n\nYou can direct upload thumb\nSend **no** for use default")
+    await editable.edit(f"SEND THE VIDEO THUMB URL\nSend /d FOR USE DEFAULT\n\nYOU CAN DIRECT UPLOAD THUMB\nSEND **no** FOR USE DEFAULT")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -558,7 +558,7 @@ async def txt_handler(bot: Client, m: Message):
     else:
         thumb = raw_text6
 
-    await editable.edit("__Please Provide Channel id or where you want to Upload video or Sent Video otherwise /d __\n\n__And make me admin in this channel then i can able to Upload otherwise i can't__")
+    await editable.edit("__PLEASE PROVIDE CHANNEL ID OR WHERE YOU WANT TO UPLOAD VIDEO OR SEND /d FOR USE DEFAULT__\n\n__AND MAKE ME ADMIN IN THIS CHANNEL THEN I CAN ABLE TO UPLOAD OTHERWISE I CAN'T😥__")
     input7: Message = await bot.listen(editable.chat.id)
     raw_text7 = input7.text
     if "/d" in input7.text:
@@ -569,11 +569,11 @@ async def txt_handler(bot: Client, m: Message):
     await editable.delete()
 
     if "/d" in raw_text7:
-        batch_message = await m.reply_text(f"<b>🎯Target Batch : {b_name}</b>")
+        batch_message = await m.reply_text(f"<b>TARGET BATCH🎯 : {b_name}</b>")
     else:
         try:
-            batch_message = await bot.send_message(chat_id=channel_id, text=f"<b>🎯Target Batch : {b_name}</b>")
-            await bot.send_message(chat_id=m.chat.id, text=f"<b><i>🎯Target Batch : {b_name}</i></b>\n\n🔄 Your Task is under processing, please check your Set Channel📱. Once your task is complete, I will inform you 📩")
+            batch_message = await bot.send_message(chat_id=channel_id, text=f"<b>TARGET BATCH🎯 : {b_name}</b>")
+            await bot.send_message(chat_id=m.chat.id, text=f"<b><i>TARGET BATCH🎯 : {b_name}</i></b>\n\n🔄 YOUR TASK IS UNDER PROCESSING, PLEASE CHECK YOUR SET CHANNEL📱. ONCE YOUR TASK IS COMPLETE, I WILL INFORM YOU 📩")
         except Exception as e:
             await m.reply_text(f"**Fail Reason »** {e}\n")
             return
@@ -659,12 +659,12 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{name1} [{res}p] .mkv`\n<pre><code>**Batch Name :** {b_name}</code></pre>\n\n**Extracted by➤**`{CR}`\n'
-                cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{name1} .pdf`\n<pre><code>**Batch Name :** {b_name}</code></pre>\n\n**Extracted by➤**`{CR}`\n'
-                cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1} .zip`\n<pre><code>**Batch Name :** {b_name}</code></pre>\n\n**Extracted by➤**`{CR}`\n' 
-                ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{name1} .jpg`\n<pre><code>**Batch Name :** {b_name}</code></pre>\n\n**Extracted by➤**`{CR}`\n'
-                ccm = f'[🎵]Audio Id : {str(count).zfill(3)}\n**Audio Title :** `{name1} .mp3`\n<pre><code>**Batch Name :** {b_name}</code></pre>\n\n**Extracted by➤**`{CR}`\n'
-                cchtml = f'[🌐]Html Id : {str(count).zfill(3)}\n**Html Title :** `{name1} .html`\n<pre><code>**Batch Name :** {b_name}</code></pre>\n\n**Extracted by➤**`{CR}`\n'
+                cc = f'[🎥]VIDEO ID : {str(count).zfill(3)}\n**VIDEO TITLE :** `{name1} [{res}p] .mkv`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n'
+                cc1 = f'[📕]PDF ID : {str(count).zfill(3)}\n**FILE TITLE :** `{name1} .pdf`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n'
+                cczip = f'[📁]ZIP ID : {str(count).zfill(3)}\n**ZIP TITLE :** `{name1} .zip`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n' 
+                ccimg = f'[🖼️]IMG ID : {str(count).zfill(3)}\n**IMG TITLE :** `{name1} .jpg`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n'
+                ccm = f'[🎵]AUDIO ID : {str(count).zfill(3)}\n**AUDIO TITLE :** `{name1} .mp3`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n'
+                cchtml = f'[🌐]HTML ID : {str(count).zfill(3)}\n**HTML TITLE :** `{name1} .html`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n'
                   
                 if "drive" in url:
                     try:
@@ -788,7 +788,7 @@ async def txt_handler(bot: Client, m: Message):
                     continue
      
                 else:
-                    Show = f"__**Video Downloading__**\n<pre><code>{str(count).zfill(3)}) {name1}</code></pre>"
+                    Show = f"__**VIDEO DOWNLOADING__**\n<pre><code>{str(count).zfill(3)}) {name1}</code></pre>"
                     prog = await bot.send_message(channel_id, Show, disable_web_page_preview=True)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -798,7 +798,7 @@ async def txt_handler(bot: Client, m: Message):
                     time.sleep(1)
                 
             except Exception as e:
-                await bot.send_message(channel_id, f'⚠️**Downloading Failed**⚠️\n**Name** =>> `{str(count).zfill(3)} {name1}`\n**Url** =>> {link0}\n\n<pre><i><b>Failed Reason: {str(e)}</b></i></pre>', disable_web_page_preview=True)
+                await bot.send_message(channel_id, f'⚠️**DOWNLOADING FAILED**⚠️\n**Name** =>> `{str(count).zfill(3)} {name1}`\n**Url** =>> {link0}\n\n<pre><i><b>Failed Reason: {str(e)}</b></i></pre>', disable_web_page_preview=True)
                 count += 1
                 failed_count += 1
                 continue
@@ -809,10 +809,10 @@ async def txt_handler(bot: Client, m: Message):
 
     success_count = len(links) - failed_count
     if raw_text7 == "/d":
-        await bot.send_message(channel_id, f"**-┈━═.•°✅ Completed ✅°•.═━┈-**\n\n**🎯Batch Name : {b_name}**\n🔗 Total URLs: {len(links)} \n┃   ┠🔴 Total Failed URLs: {failed_count}\n┃   ┠🟢 Total Successful URLs: {success_count}\n┃   ┃   ┠🎥 Total Video URLs: {other_count}\n┃   ┃   ┠📄 Total PDF URLs: {pdf_count}\n┃   ┃   ┠📸 Total IMAGE URLs: {img_count}\n")
+        await bot.send_message(channel_id, f"**-┈━═.•°✅ COMPLETED ✅😎°•.═━┈-**\n\n**BATCH NAME🎯 : {b_name}**\n🔗 TOTAL URLS: {len(links)} \n┃   ┠🔴 TOTAL FAILED URLS: {failed_count}\n┃   ┠🟢 TOTAL SUCCESSFUL URLS: {success_count}\n┃   ┃   ┠🎥 TOTAL VIDEO URLS: {other_count}\n┃   ┃   ┠📄 TOTAL PDF URLS: {pdf_count}\n┃   ┃   ┠📸 TOTAL IMAGE URLS: {img_count}\n")
     else:
-        await bot.send_message(channel_id, f"**-┈━═.•°✅ Completed ✅°•.═━┈-**\n\n**🎯Batch Name : {b_name}**\n<blockquote>🔗 Total URLs: {len(links)} \n┃   ┠🔴 Total Failed URLs: {failed_count}\n┃   ┠🟢 Total Successful URLs: {success_count}\n┃   ┃   ┠🎥 Total Video URLs: {other_count}\n┃   ┃   ┠📄 Total PDF URLs: {pdf_count}\n┃   ┃   ┠📸 Total IMAGE URLs: {img_count}</blockquote>\n")
-        await bot.send_message(m.chat.id, f"<blockquote><b>✅ Your Task is completed, please check your Set Channel📱</b></blockquote>")
+        await bot.send_message(channel_id, f"**-┈━═.•°✅ COMPLETED ✅😎°•.═━┈-**\n\n**BATCH NAME🎯 : {b_name}**\n<blockquote>🔗 TOTAL URLS: {len(links)} \n┃   ┠🔴 TOTAL FAILED URLS: {failed_count}\n┃   ┠🟢 TOTAL SUCCESSFUL URLS: {success_count}\n┃   ┃   ┠🎥 TOTAL VIDEO URLS: {other_count}\n┃   ┃   ┠📄 TOTAL PDF URLS: {pdf_count}\n┃   ┃   ┠📸 TOTAL IMAGE URLS: {img_count}</blockquote>\n")
+        await bot.send_message(m.chat.id, f"<blockquote><b>✅ YOUR TASK IS COMPLETED, PLEASE CHECK YOUR SET CHANNEL📱</b></blockquote>")
 
 
 @bot.on_message(filters.text & filters.private)
@@ -854,7 +854,7 @@ async def text_handler(bot: Client, m: Message):
     except Exception:
             res = "UN"
           
-    await editable.edit("<pre><code>Enter Your PW Token For 𝐌𝐏𝐃 𝐔𝐑𝐋\nOtherwise send anything</code></pre>")
+    await editable.edit("<pre><code>ENTER YOUR PW TOKEN FOR 𝐌𝐏𝐃 𝐔𝐑𝐋\nOTHERWISE SEND anything</code></pre>")
     input4: Message = await bot.listen(editable.chat.id, filters=filters.text & filters.user(m.from_user.id))
     raw_text4 = input4.text
     await input4.delete(True)
@@ -950,7 +950,7 @@ async def text_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name} [{res}].mp4`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{CREDIT}`'
+                cc = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name} [{res}].mp4`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 » `{CREDIT}`'
                 cc1 = f'📕𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `{CREDIT}`'
                   
                 if "drive" in url:
@@ -1002,7 +1002,7 @@ async def text_handler(bot: Client, m: Message):
                             
                         if not success:
                             # Send the final failure message if all retries fail
-                            await m.reply_text(f"Failed to download PDF after {max_retries} attempts.\n⚠️**Downloading Failed**⚠️\n**Name** =>> {str(count).zfill(3)} {name1}\n**Url** =>> {link0}", disable_web_page_preview)
+                            await m.reply_text(f"Failed to download PDF after {max_retries} attempts.\n⚠️**DOWNLOADING FAILED🥴**⚠️\n**Name** =>> {str(count).zfill(3)} {name1}\n**Url** =>> {link0}", disable_web_page_preview)
                             
                     else:
                         try:
@@ -1102,7 +1102,7 @@ async def text_handler(bot: Client, m: Message):
                     time.sleep(1)
 
             except Exception as e:
-                    await m.reply_text(f"⚠️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐮𝐩𝐭𝐞𝐝\n\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n\n__**⚠️Failed Reason »**__\n{str(e)}")
+                    await m.reply_text(f"⚠️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐮𝐩𝐭𝐞𝐝🥴\n\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n\n__**⚠️FAILED REASON »**__\n{str(e)}")
                     pass
 
     except Exception as e:
