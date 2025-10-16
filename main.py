@@ -409,7 +409,7 @@ async def info(bot: Client, update: Message):
         reply_markup=BUTTONSCONTACT
     )
 
-@bot.on_message(filters.command(["help"]))
+@bot.on_message(filters.command(["explore"]))
 async def txt_handler(client: Client, m: Message):
     await bot.send_message(m.chat.id, text= (
         f"╭━━━━━━━✦𝄞✦━━━━━━━╮\n"
