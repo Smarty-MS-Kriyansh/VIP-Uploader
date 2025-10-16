@@ -144,7 +144,7 @@ async def cookies_handler(client: Client, m: Message):
             target_file.write(cookies_content)
 
         await input_message.reply_text(
-            "✅ Cookies updated successfully.\n📂 Saved in `youtube_cookies.txt`."
+            "✅ COOKIES UPDATED SUCCESSFULLY.\n📂 Saved in `youtube_cookies.txt`."
         )
 
     except Exception as e:
@@ -281,7 +281,7 @@ async def restart_handler(_, m):
             m.chat.id, 
             f"<blockquote>__**Oopss! You are not a Premium member**__\n"
             f"__**PLEASE /upgrade YOUR PLAN**__\n"
-            f"__**Send me your user id for authorization**__\n"
+            f"__**SEND ME YOUR USER ID FOR AUTHORIZATION**__\n"
             f"__**Your User id** __- `{m.chat.id}`</blockquote>\n\n"
         )
     else:
@@ -295,26 +295,26 @@ async def start(bot, m: Message):
     mention = user.mention
     start_message = await bot.send_message(
         m.chat.id,
-        f"🌟 Welcome Dear😉 {m.from_user.first_name}! 🌟\n\n"
+        f"🌟 WELCOME DEAR😉 {m.from_user.first_name}! 🌟\n\n"
     )
 
     await asyncio.sleep(1)
     await start_message.edit_text(
-        f"🌟 Welcome😗 {m.from_user.first_name}! 🌟\n\n" +
+        f"🌟 WELCOME😗 {m.from_user.first_name}! 🌟\n\n" +
         f"Initializing Uploader bot... 🤖\n\n"
         f"Progress: [⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️] 0%\n\n"
     )
 
     await asyncio.sleep(1)
     await start_message.edit_text(
-        f"🌟 Welcome😚 {m.from_user.first_name}! 🌟\n\n" +
+        f"🌟 WELCOME😚 {m.from_user.first_name}! 🌟\n\n" +
         f"Loading features... ⏳\n\n"
         f"Progress: [🟥🟥🟥⬜️⬜️⬜️⬜️⬜️⬜️⬜️] 25%\n\n"
     )
     
     await asyncio.sleep(1)
     await start_message.edit_text(
-        f"🌟 Welcome😙 {m.from_user.first_name}! 🌟\n\n" +
+        f"🌟 WELCOME😙 {m.from_user.first_name}! 🌟\n\n" +
         f"This may take a moment, sit back and relax! 😊\n\n"
         f"Progress: [🟧🟧🟧🟧🟧⬜️⬜️⬜️⬜️⬜️] 50%\n\n"
     )
@@ -329,17 +329,17 @@ async def start(bot, m: Message):
     await asyncio.sleep(1)
     if m.chat.id in AUTH_USERS:
         await start_message.edit_text(
-            f"🌟 Welcome🤩 {m.from_user.first_name}! 🌟\n\n" +
+            f"🌟 WELCOME🤩 {m.from_user.first_name}! 🌟\n\n" +
             f"Great! You are a premium member!\n"
-            f"Use Command : /explore to get started 🌟\n\n"
-            f"If you face any problem contact -  [@SmartBoy_ApnaMS](https://t.me/SmartBoy_ApnaMS)\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
+            f"USE COMMAND : /explore TO GET STARTED 🌟\n\n"
+            f"IF YOU FACE ANY PROBLEM CONTACT -  [@SmartBoy_ApnaMS](https://t.me/SmartBoy_ApnaMS)\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
         )
     else:
         await asyncio.sleep(2)
         await start_message.edit_text(
            f" 🎉 Welcome {m.from_user.first_name} to DRM Bot! 🎉\n\n"
-           f"You can have access to download all Non-DRM+AES Encrypted URLs 🔐 including\n\n"
-           f"Use Command : /explore to get started 🌟\n\n"
+           f"YOU CAN HAVE ACCESS TO DOWNLOAD ALL NON-DRM+AES ENCRYPTED URLS 🔐 INCLUDING\n\n"
+           f"USE COMMAND : /explore TO GET STARTED 🌟\n\n"
            f"<blockquote>• 📚 Appx Zip+Encrypted Url\n"
            f"• 🎓 Classplus DRM+ NDRM\n"
            f"• 🧑‍🏫 PhysicsWallah DRM\n"
@@ -355,8 +355,8 @@ async def start(bot, m: Message):
            f"• 🎓 All Non DRM+AES Encrypted U\n"
            f"• 🎓 MPD URLs if the key is known (e.g., Mpd_url?key=key XX:XX)</blockquote>\n\n"
            f"🚀 You are not subscribed to any plan yet!\n\n"
-           f"<blockquote>💵 Monthly Plan: 1000₹</blockquote>\n\n"
-           f"If you want to buy membership of the bot, feel free to contact to me😉.\n", disable_web_page_preview=True, reply_markup=keyboard
+           f"<blockquote>💵 MONTHLY PLAN: 1000₹</blockquote>\n\n"
+           f"IF YOU WANT TO BUY MEMBERSHIP OF THE BOT, FEEL FREE TO CONTACT TO ME😉.\n", disable_web_page_preview=True, reply_markup=keyboard
     )
 
 @bot.on_message(filters.command(["upgrade"]))
@@ -364,8 +364,8 @@ async def id_command(client, message: Message):
     chat_id = message.chat.id
     await message.reply_text(
         f" 🎉 Welcome {message.from_user.first_name} to DRM Bot! 🎉\n\n"
-           f"You can have access to download all Non-DRM+AES Encrypted URLs 🔐 including\n\n"
-           f"Use Command : /explore to get started 🌟\n\n"
+           f"YOU CAN HAVE ACCESS TO DOWNLOAD ALL NON-DRM+AES ENCRYPTED URLS 🔐 INCLUDING\n\n"
+           f"USE COMMAND : /explore TO GET STARTED 🌟\n\n"
            f"• 📚 Appx Zip+Encrypted Url\n"
            f"• 🎓 Classplus DRM+ NDRM\n"
            f"• 🧑‍🏫 PhysicsWallah DRM\n"
@@ -380,8 +380,8 @@ async def id_command(client, message: Message):
            f"• 🎓 Utkarsh Protection(Video + PDF)\n"
            f"• 🎓 All Non DRM+AES Encrypted URLs\n"
            f"• 🎓 MPD URLs if the key is known (e.g., Mpd_url?key=key XX:XX)\n\n"
-           f"<blockquote>💵 Monthly Plan: 1000₹</blockquote>\n\n"
-           f"If you want to buy membership of the bot, feel free to contact to me😉.\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
+           f"<blockquote>💵 MONTHLY PLAN: 1000₹</blockquote>\n\n"
+           f"IF YOU WANT TO BUY MEMBERSHIP OF THE BOT, FEEL FREE TO CONTACT TO ME😉.\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
     )  
 
 @bot.on_message(filters.command(["id"]))
@@ -394,12 +394,12 @@ async def info(bot: Client, update: Message):
     
     text = (
         f"╭────────────────╮\n"
-        f"│✨**Your Telegram Info🙃**✨ \n"
+        f"│✨**YOUR TELEGRAM INFO🙃**✨ \n"
         f"├────────────────\n"
-        f"├🔹**Your Name :** `{update.from_user.first_name} {update.from_user.last_name if update.from_user.last_name else 'None'}`\n"
-        f"├🔹**User Name :** @{update.from_user.username}\n"
-        f"├🔹**User ID :** `{update.from_user.id}`\n"
-        f"├🔹**Profile :** {update.from_user.mention}\n"
+        f"├🔹**YOUR NAME :** `{update.from_user.first_name} {update.from_user.last_name if update.from_user.last_name else 'None'}`\n"
+        f"├🔹**USER NAME :** @{update.from_user.username}\n"
+        f"├🔹**USER ID :** `{update.from_user.id}`\n"
+        f"├🔹**PROFILE :** {update.from_user.mention}\n"
         f"╰────────────────╯"
     )
     
@@ -417,26 +417,26 @@ async def txt_handler(client: Client, m: Message):
         f"╰━━━━━━━✦𝄞✦━━━━━━━╯\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n" 
         f"📌 𝗠𝗮𝗶𝗻 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀:\n\n"  
-        f"➥ /start – Bot Status Check\n"
-        f"➥ /vip – Extract from txt(Super Fast)😎\n"
-        f"➥ /yt2t – YouTube → .txt Converter\n"  
-        f"➥ /txt – Text → .txt file Generator\n" 
-        f"➥ /stop – Cancel Running Task\n"
+        f"➥ /start – BOT STATUS CHECK\n"
+        f"➥ /vip – EXTRACT FROM TXT(SUPER FAST)😎\n"
+        f"➥ /yt2t – YOUTUBE → .TXT CONVERTER\n"  
+        f"➥ /txt – TEXT → .TXT FILE GENERATOR\n" 
+        f"➥ /stop – CANCEL RUNNING TASK\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ \n" 
         f"⚙️ 𝗧𝗼𝗼𝗹𝘀 & 𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀: \n\n" 
-        f"➥ /cookies – Update YT Cookies\n" 
-        f"➥ /id – Get Chat/User ID\n"  
-        f"➥ /info – User Details\n"  
-        f"➥ /logs – View Bot Activity\n"
+        f"➥ /cookies – UPDATE YT COOKIES\n" 
+        f"➥ /id – GET CHAT/USER ID\n"  
+        f"➥ /info – USER DETAILS\n"  
+        f"➥ /logs – VIEW BOT ACTIVITY\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
         f"👤 𝐔𝐬𝐞𝐫 𝐀𝐮𝐭𝐡𝐞𝐧𝐭𝐢𝐜𝐚𝐭𝐢𝐨𝐧: **(OWNER)**\n\n" 
-        f"➥ /addauth xxxx – Add User ID\n" 
-        f"➥ /rmauth xxxx – Remove User ID\n"  
-        f"➥ /users – Total User List\n"  
+        f"➥ /addauth xxxx – ADD USER ID\n" 
+        f"➥ /rmauth xxxx – REMOVE USER ID\n"  
+        f"➥ /users – TOTAL USER LIST\n"  
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
         f"💡 𝗡𝗼𝘁𝗲:\n\n"  
-        f"• Send any link for auto-extraction\n"  
-        f"• Supports batch processing\n\n"  
+        f"• SEND ANY LINK FOR AUTO-EXTRACTION\n"  
+        f"• SUPPORTS BATCH PROCESSING\n\n"  
         f"╭────────⊰◆⊱────────╮\n"   
         f" ➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : ༺𝗩𝗜𝗣 𝗕𝗥𝗢𝗧𝗛𝗘𝗥𝗦༻\n"
         f"╰────────⊰◆⊱────────╯\n"
