@@ -59,12 +59,12 @@ photozip = 'https://envs.sh/cD_.jpg'
 
 
 # Inline keyboard for start command
-BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/inventor_king_09")]])
+BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="CONTACT📞", url="https://t.me/SmartBoy_ApnaMS")]])
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="🛠️ Chanel", url="https://t.me/+RZDBATzxxTgxMDZl"),
-            InlineKeyboardButton(text="🛠️ help", url="https://t.me/inventor_king_09"),
+            InlineKeyboardButton(text="CHANNEL😍", url="https://t.me/NEET_Saathi"),
+            InlineKeyboardButton(text="HELP🛠️", url="https://t.me/SmartBoy_ApnaMS"),
         ],
     ]
 )
@@ -80,7 +80,7 @@ image_urls = [
 @bot.on_message(filters.command("addauth") & filters.private)
 async def add_auth_user(client: Client, message: Message):
     if message.chat.id != OWNER:
-        return await message.reply_text("You are not authorized to use this command.")
+        return await message.reply_text("You are not authorized to use this command🤡.")
     
     try:
         new_user_id = int(message.command[1])
@@ -150,7 +150,7 @@ async def cookies_handler(client: Client, m: Message):
     except Exception as e:
         await m.reply_text(f"⚠️ An error occurred: {str(e)}")
 
-@bot.on_message(filters.command(["t2t"]))
+@bot.on_message(filters.command(["txt"]))
 async def text_to_txt(client, message: Message):
     user_id = str(message.from_user.id)
     # Inform the user to send the text data and its desired file name
@@ -163,13 +163,13 @@ async def text_to_txt(client, message: Message):
     text_data = input_message.text.strip()
     await input_message.delete()  # Corrected here
     
-    await editable.edit("**🔄 Send file name or send /d for filename**")
+    await editable.edit("**🔄 Send file name or send /ms for filename**")
     inputn: Message = await bot.listen(message.chat.id)
     raw_textn = inputn.text
     await inputn.delete()  # Corrected here
     await editable.delete()
 
-    if raw_textn == '/d':
+    if raw_textn == '/ms':
         custom_file_name = 'txt_file'
     else:
         custom_file_name = raw_textn
@@ -186,7 +186,7 @@ async def text_to_txt(client, message: Message):
 UPLOAD_FOLDER = '/path/to/upload/folder'
 EDITED_FILE_PATH = '/path/to/save/edited_output.txt'
 
-@bot.on_message(filters.command(["y2t"]))
+@bot.on_message(filters.command(["yt2t"]))
 async def youtube_to_txt(client, message: Message):
     user_id = str(message.from_user.id)
     
@@ -285,7 +285,7 @@ async def restart_handler(_, m):
             f"__**Your User id** __- `{m.chat.id}`</blockquote>\n\n"
         )
     else:
-        await m.reply_text("🚦**STOPPED**🚦", True)
+        await m.reply_text("🔴**STOPPED**🔴", True)
         os.execl(sys.executable, sys.executable, *sys.argv)
         
 
@@ -295,33 +295,33 @@ async def start(bot, m: Message):
     mention = user.mention
     start_message = await bot.send_message(
         m.chat.id,
-        f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n"
+        f"🌟 Welcome Dear😉 {m.from_user.first_name}! 🌟\n\n"
     )
 
     await asyncio.sleep(1)
     await start_message.edit_text(
-        f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
+        f"🌟 Welcome😗 {m.from_user.first_name}! 🌟\n\n" +
         f"Initializing Uploader bot... 🤖\n\n"
         f"Progress: [⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️] 0%\n\n"
     )
 
     await asyncio.sleep(1)
     await start_message.edit_text(
-        f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
+        f"🌟 Welcome😚 {m.from_user.first_name}! 🌟\n\n" +
         f"Loading features... ⏳\n\n"
         f"Progress: [🟥🟥🟥⬜️⬜️⬜️⬜️⬜️⬜️⬜️] 25%\n\n"
     )
     
     await asyncio.sleep(1)
     await start_message.edit_text(
-        f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
+        f"🌟 Welcome😙 {m.from_user.first_name}! 🌟\n\n" +
         f"This may take a moment, sit back and relax! 😊\n\n"
         f"Progress: [🟧🟧🟧🟧🟧⬜️⬜️⬜️⬜️⬜️] 50%\n\n"
     )
 
     await asyncio.sleep(1)
     await start_message.edit_text(
-        f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
+        f"🌟 Welcome😚 {m.from_user.first_name}! 🌟\n\n" +
         f"Checking subscription status... 🔍\n\n"
         f"Progress: [🟨🟨🟨🟨🟨🟨🟨🟨⬜️⬜️] 75%\n\n"
     )
@@ -329,17 +329,17 @@ async def start(bot, m: Message):
     await asyncio.sleep(1)
     if m.chat.id in AUTH_USERS:
         await start_message.edit_text(
-            f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
+            f"🌟 Welcome🤩 {m.from_user.first_name}! 🌟\n\n" +
             f"Great! You are a premium member!\n"
-            f"Use Command : /help to get started 🌟\n\n"
-            f"If you face any problem contact -  [@inventor_king_09](https://t.me/inventor_king_09)\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
+            f"Use Command : /explore to get started 🌟\n\n"
+            f"If you face any problem contact -  [@SmartBoy_ApnaMS](https://t.me/SmartBoy_ApnaMS)\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
         )
     else:
         await asyncio.sleep(2)
         await start_message.edit_text(
            f" 🎉 Welcome {m.from_user.first_name} to DRM Bot! 🎉\n\n"
            f"You can have access to download all Non-DRM+AES Encrypted URLs 🔐 including\n\n"
-           f"Use Command : /help to get started 🌟\n\n"
+           f"Use Command : /explore to get started 🌟\n\n"
            f"<blockquote>• 📚 Appx Zip+Encrypted Url\n"
            f"• 🎓 Classplus DRM+ NDRM\n"
            f"• 🧑‍🏫 PhysicsWallah DRM\n"
@@ -352,11 +352,11 @@ async def start(bot, m: Message):
            f"• 🎓 Visionias Protection\n"
            f"• 🎓 Zoom Video\n"
            f"• 🎓 Utkarsh Protection(Video + PDF)\n"
-           f"• 🎓 All Non DRM+AES Encrypted URLs\n"
+           f"• 🎓 All Non DRM+AES Encrypted U\n"
            f"• 🎓 MPD URLs if the key is known (e.g., Mpd_url?key=key XX:XX)</blockquote>\n\n"
            f"🚀 You are not subscribed to any plan yet!\n\n"
-           f"<blockquote>💵 Monthly Plan: 100₹</blockquote>\n\n"
-           f"If you want to buy membership of the bot, feel free to contact the Bot Admin.\n", disable_web_page_preview=True, reply_markup=keyboard
+           f"<blockquote>💵 Monthly Plan: 1000₹</blockquote>\n\n"
+           f"If you want to buy membership of the bot, feel free to contact to me😉.\n", disable_web_page_preview=True, reply_markup=keyboard
     )
 
 @bot.on_message(filters.command(["upgrade"]))
@@ -365,7 +365,7 @@ async def id_command(client, message: Message):
     await message.reply_text(
         f" 🎉 Welcome {message.from_user.first_name} to DRM Bot! 🎉\n\n"
            f"You can have access to download all Non-DRM+AES Encrypted URLs 🔐 including\n\n"
-           f"Use Command : /help to get started 🌟\n\n"
+           f"Use Command : /explore to get started 🌟\n\n"
            f"• 📚 Appx Zip+Encrypted Url\n"
            f"• 🎓 Classplus DRM+ NDRM\n"
            f"• 🧑‍🏫 PhysicsWallah DRM\n"
@@ -380,8 +380,8 @@ async def id_command(client, message: Message):
            f"• 🎓 Utkarsh Protection(Video + PDF)\n"
            f"• 🎓 All Non DRM+AES Encrypted URLs\n"
            f"• 🎓 MPD URLs if the key is known (e.g., Mpd_url?key=key XX:XX)\n\n"
-           f"<blockquote>💵 Monthly Plan: 100₹</blockquote>\n\n"
-           f"If you want to buy membership of the bot, feel free to contact the Bot Admin.\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
+           f"<blockquote>💵 Monthly Plan: 1000₹</blockquote>\n\n"
+           f"If you want to buy membership of the bot, feel free to contact to me😉.\n", disable_web_page_preview=True, reply_markup=BUTTONSCONTACT
     )  
 
 @bot.on_message(filters.command(["id"]))
@@ -394,11 +394,11 @@ async def info(bot: Client, update: Message):
     
     text = (
         f"╭────────────────╮\n"
-        f"│✨ **Your Telegram Info**✨ \n"
+        f"│✨**Your Telegram Info🙃**✨ \n"
         f"├────────────────\n"
-        f"├🔹**Name :** `{update.from_user.first_name} {update.from_user.last_name if update.from_user.last_name else 'None'}`\n"
-        f"├🔹**User ID :** @{update.from_user.username}\n"
-        f"├🔹**TG ID :** `{update.from_user.id}`\n"
+        f"├🔹**Your Name :** `{update.from_user.first_name} {update.from_user.last_name if update.from_user.last_name else 'None'}`\n"
+        f"├🔹**User Name :** @{update.from_user.username}\n"
+        f"├🔹**User ID :** `{update.from_user.id}`\n"
         f"├🔹**Profile :** {update.from_user.mention}\n"
         f"╰────────────────╯"
     )
