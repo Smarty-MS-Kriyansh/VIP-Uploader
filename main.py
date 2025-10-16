@@ -532,7 +532,7 @@ async def txt_handler(bot: Client, m: Message):
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
-    if raw_text3 == '/d':
+    if raw_text3 == '/ms':
         CR = f"{CREDIT}"
     elif "," in raw_text3:
         CR, PRENAME = raw_text3.split(",")
@@ -544,7 +544,7 @@ async def txt_handler(bot: Client, m: Message):
     raw_text4 = input4.text
     await input4.delete(True)
 
-    await editable.edit(f"Send the Video Thumb URL\nSend /ms for use default\n\nYou can direct upload thumb\nSend **no** for use default")
+    await editable.edit(f"Send the Video Thumb URL\nSend 'no' for use default\n\nYou can direct upload thumb Also \nSend **no** for use default")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -854,7 +854,7 @@ async def text_handler(bot: Client, m: Message):
     except Exception:
             res = "UN"
           
-    await editable.edit("<pre><code>Enter Your PW Token For 𝐌𝐏𝐃 𝐔𝐑𝐋\nOtherwise send anything</code></pre>")
+    await editable.edit("<pre><code>Enter Your PW Token For 𝐌𝐏𝐃 𝐔𝐑𝐋\nOtherwise send /pro</code></pre>")
     input4: Message = await bot.listen(editable.chat.id, filters=filters.text & filters.user(m.from_user.id))
     raw_text4 = input4.text
     await input4.delete(True)
