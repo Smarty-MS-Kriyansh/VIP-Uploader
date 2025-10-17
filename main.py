@@ -659,12 +659,12 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'[🎥]VIDEO ID : {str(count).zfill(3)}\n**VIDEO TITLE :** `{name1} [{res}p] .mkv`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n'
-                cc1 = f'[📕]PDF ID : {str(count).zfill(3)}\n**FILE TITLE :** `{name1} .pdf`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n'
-                cczip = f'[📁]ZIP ID : {str(count).zfill(3)}\n**ZIP TITLE :** `{name1} .zip`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n' 
-                ccimg = f'[🖼️]IMG ID : {str(count).zfill(3)}\n**IMG TITLE :** `{name1} .jpg`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n'
-                ccm = f'[🎵]AUDIO ID : {str(count).zfill(3)}\n**AUDIO TITLE :** `{name1} .mp3`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n'
-                cchtml = f'[🌐]HTML ID : {str(count).zfill(3)}\n**HTML TITLE :** `{name1} .html`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n'
+                cc = f'[🎥]VIDEO ID : {str(count).zfill(3)}\n**VIDEO TITLE :** `{name1} [{res}p] .mkv`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n\n**━━━━━✦🧡𝗝𝗕🧡✦━━━━━━**'
+                cc1 = f'[📕]PDF ID : {str(count).zfill(3)}\n**FILE TITLE :** `{name1} .pdf`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n\n**━━━━━✦🧡𝗝𝗕🧡✦━━━━━━**'
+                cczip = f'[📁]ZIP ID : {str(count).zfill(3)}\n**ZIP TITLE :** `{name1} .zip`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n\n**━━━━━✦🧡𝗝𝗕🧡✦━━━━━━**' 
+                ccimg = f'[🖼️]IMG ID : {str(count).zfill(3)}\n**IMG TITLE :** `{name1} .jpg`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n\n**━━━━━✦🧡𝗝𝗕🧡✦━━━━━━**'
+                ccm = f'[🎵]AUDIO ID : {str(count).zfill(3)}\n**AUDIO TITLE :** `{name1} .mp3`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n\n**━━━━━✦🧡𝗝𝗕🧡✦━━━━━━**'
+                cchtml = f'[🌐]HTML ID : {str(count).zfill(3)}\n**HTML TITLE :** `{name1} .html`\n<pre><code>**BATCH NAME :** {b_name}</code></pre>\n\n**EXTRACTED BY➤**`{CR}`\n\n**━━━━━✦🧡𝗝𝗕🧡✦━━━━━━**'
                   
                 if "drive" in url:
                     try:
